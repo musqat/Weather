@@ -49,7 +49,7 @@ public class DiaryService {
     }
 
     @Transactional
-    @Scheduled(cron = "0 0 0 * * *")
+    @Scheduled(cron = "0 0 1 * * *")
     public void saveWeatherDate(){
         logger.info("Saving weatherDate");
         dateWeatherRepository.save(getWeatherFromApi());
